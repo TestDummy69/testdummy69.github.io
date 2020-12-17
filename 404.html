@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
+  <title>404</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/svg" href="/images/logo-colored.svg">
+
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <link rel='stylesheet' type='text/css' href='styles/style.css'>
+
+  <!-- Import CSS tags -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Remix icons (https://remixicon.com)-->
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <!-- Phosphor Icons (https://github.com/phosphor-icons/phosphor-home)-->
+
+  <!-- Import link tags -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <!-- CSS normalizer http://nicolasgallagher.com/ -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- 404 Page styling -->
+  <style>
+    .container-404 {
+      width: 100vw;
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: whitesmoke;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .title-404 {
+      margin-bottom: 0;
+      font-size: 100px;
+      letter-spacing: 30px;
+      padding-left: 25px;
+    }
+
+    .desc-404 {
+      margin-bottom: 15px;
+    }
+
+    .go-back {
+      transition: all 0.33s ease;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .go-back:hover {
+      transition: all 0.33s ease;
+      color: #ff6639;
+      cursor: pointer;
+    }
+
+    .back-container:hover+.rickroll-warn {
+      transition: all 0.33s ease;
+      opacity: 1;
+    }
+
+    .rickroll-warn {
+      transition: all 0.33s ease;
+      pointer-events: none;
+      opacity: 0;
+      margin-top: 10px;
+      color: rgba(245, 245, 245, 0.651);
+    }
+
+    .back-container {
+      display: flex;
+      margin: 0;
+    }
+
+    .link-arrow {
+      font-size: 18px;
+      padding-left: 3px;
+    }
+
+    @media only screen and (max-width: 720px) {
+      .title-404 {
+        font-size: 60px;
+      }
+
+      .desc-404 {
+        margin-top: 10px;
+        font-size: 16px;
+        padding-right: 5%;
+        padding-left: 5%;
+      }
+    }
+  </style>
+
+</head>
+
+<body onload="init()">
+
+  <!-- Cursor Div -->
+  <div class="cursor" id="cursor-hover"></div>
+
+  <div class="page-content">
+
+    <!-- Header (Logo Image, Name, Hamburger etc) -->
+    <header>
+      <!-- Hamburger menu when active -->
+
+      <div id="hamburger-menu">
+        <ul class="menu-items">
+          <li class="menu-items-list">
+            <a href="#" id="menu-item-hover">Aboot</a></li>
+          <li class="menu-items-list">
+            <a href="mailto:pixelibrar@gmail.com" id="menu-item-hover">Cotnact</a></li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="https://twitter.com/ibalakhan" target="_blank"> <i class="ph-twitter-logo-light social-icon"></i> </a>
+          <a href="https://www.youtube.com/channel/UCjZ7fTmwh9vRIRMUO0rIrrQ" target="_blank"> <i class="ph-youtube-logo-light social-icon"></i> </a>
+          <a href="mailto:pixelibrar@gmail.com" target="ma"> <i class="ph-envelope-simple-open-light social-icon"></i> </a>
+        </div>
+
+      </div>
+      <!-- Logo & Text -->
+      <div class="header-fixed">
+
+        <div class="logo-container">
+          <a href="index.html">
+            <!-- SVG logo -->
+
+
+            <svg alt="Logo" class="logo-image" width="50px" height="50px" viewBox="0 0 2225 1546" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.9">
+                <path d="M1781 1546L2225 0H1808.5L1481 1141.5H1076.5L1405 0H988.5L542 1546H1781Z"/>
+                <path d="M0 1545.5L312.5 457H729.5L416 1545.5H0Z" />
+                <path d="M346 341L442.5 0H859.5L764 341H346Z"/>
+                </g>
+                </svg>
+
+          </a>
+
+          <!-- Header Text -->
+          <div class="header-text">
+            <h3 class="myname">Irbab uLlAh</h3>
+            <h3 class="motto">Garfic Degisner</h3>
+          </div>
+          <!-- Hamburger icon animated -->
+          <div class="hamburger" id="hamburger-hover"
+            onclick="myFunction(this); document.getElementById('hamburger-menu').classList.toggle('hamburger-active');">
+            <div class="bar1"></div>
+            <div class="bar3"></div>
+          </div>
+          <!-- Desktop Header Items -->
+          <div class="header-links-container">
+            <ul class="header-links">
+              <li><a href="#">Aboot</a></li>
+              <li><a href="mailto:pixelibrar@gmail.com">Cotnact</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </header>
+
+
+    <main>
+      <div class="container-404">
+        <h1 class="title-404">404</h1>
+        <h3 class="desc-404">Oops! Site just had a stroke searching for this page.</h3>
+
+        <div class="back-container">
+          <p onclick="randomSite();" class="go-back"><a href="javascript:openSite()">Go back home</a></p>
+          <i class="ri-arrow-right-up-line link-arrow"></i>
+        </div>
+
+        <p class="rickroll-warn">Careful! There is a small chance of getting Rick Rolled</p>
+      </div>
+    </main>
+
+
+    <footer class="footer">
+      <div class="footer-line"></div>
+
+      <div class="footer-items">
+        <div>
+          <h3 class="footer-text">
+            Designed & coded with stress & love
+            <br>
+            by <span class="footer-name">Ibrar Ullah</span>.
+          </h3>
+        </div>
+
+        <div>
+          <a href="https://twitter.com/ibalakhan" target="_blank"> <i
+              class="ph-twitter-logo-fill social-icon-footer"></i></a>
+          <a href="https://www.youtube.com/channel/UCjZ7fTmwh9vRIRMUO0rIrrQ" target="_blank"> <i
+              class="ph-youtube-logo-fill social-icon-footer"></i></a>
+        </div>
+      </div>
+
+    </footer>
+
+    <!-- Javascript Imports -->
+    <script src='js/main.js'></script>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      var sites = [
+        'https://www.youtube.com/watch?v=ub82Xb1C8os',
+        'index.html',
+      ];
+
+      function randomSite() {
+        var i = parseInt(Math.random() * sites.length);
+        location.href = sites[i];
+      }
+
+    </script>
+</body>
+
+</html>

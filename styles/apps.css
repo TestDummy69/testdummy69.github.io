@@ -1,0 +1,288 @@
+/* Page styling */
+
+.apps-container {
+    color: whitesmoke;
+    margin: 100px 3% 50px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.others-container {
+    margin-top: 0;
+}
+
+.app-item-container {
+    margin-bottom: 30px;
+    max-width: 33%;
+    min-width: 33%;
+}
+
+/* Apps page border color */
+.bounding-box {
+    border: solid 1px rgba(245, 245, 245, 0.205);
+}
+
+/* Tasker project page border color */
+.bounding-box-tasker {
+    border: solid 1px #ffb14352;
+}
+
+.bounding-box, .bounding-box-tasker {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 92%;
+    width: 85%;
+    margin: auto;
+    transition: all 0.33s ease;
+}
+
+.bounding-box-tasker:hover {
+    border: solid 1px #ffb24577;
+}
+
+.bounding-box:hover {
+    border: solid 1px rgba(245, 245, 245, 0.384);
+    transition: all 0.33s ease;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+}
+
+.app-thumbnail {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.title-and-type {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Text Styling */
+
+.app-title {
+    padding-right: 6px;
+}
+
+.app-description {
+    margin-top: 0px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* Button styling */
+
+.cta-button-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.cta-button-1, .cta-button-2, .cta-button-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* cursor: none; */
+    color: whitesmoke;
+    border: none;
+    font-size: 13px;
+    width: 100%;
+    height: 40px;
+    font-family: Manrope;
+    /* border-radius: 100px; */
+}
+
+.cta-button-1:hover, .cta-button-2:hover, .cta-button-3:hover {
+    cursor: pointer;
+}
+
+#button-1, #button-2 {
+    width: 100%;
+}
+
+#button-2, #button-3 {
+    padding-left: 10px;
+}
+
+#button-3 {
+    width: 30%;
+}
+
+.cta-button-1 {
+    border: solid 1px #2471f2;
+    background-color: #2471f257;
+    transition: all 0.33s ease;
+}
+
+.cta-button-1:hover {
+    transition: all 0.33s ease;
+    background-color: #2471f2;
+    border: solid 1px #2471f2;
+}
+
+.cta-button-2 {
+    transition: all 0.33s ease;
+    border: solid 1px #5695ff;
+    background-color: #5695ff5c;
+}
+
+.cta-button-2:hover {
+    background-color: #5695ff;
+}
+
+.cta-button-3 {
+    transition: all 0.33s ease;
+    border: solid 1px #5695ff;
+    background-color: #5695ff5c;
+}
+
+.cta-button-3:hover {
+    background-color: #5695ff;
+}
+
+.cta-icon-1, .cta-icon-2 {
+    padding-right: 6px;
+}
+
+.cta-icon-1, .cta-icon-2 {
+    font-size: 17px;
+}
+
+.cta-icon-3 {
+    font-size: 20px;
+}
+
+#cta-button-disabled {
+    border: solid 1px #5694ff56;
+    background-color: #5694ff28;
+    color: rgba(245, 245, 245, 0.425);
+}
+
+
+/* Other Styles */
+
+.section-container {
+    align-items: center;
+    display: flex;
+    padding-bottom: 35px;
+    margin: auto 4%;
+}
+
+.section-title {
+    color: whitesmoke;
+    text-align: left;
+    font-size: 27px;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+.section-line {
+    border-top: solid 1px #ff67389c;
+    width: 100%;
+}
+
+.line-left {
+    display: none;
+}
+
+/* App Type Container Styling */
+
+.app-type-klwp, .app-type-kwgt, .app-type-icon-pack, .app-type-wallpaper {
+    height: 23px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.33s ease;
+}
+
+/* smaller width */
+.app-type-klwp, .app-type-kwgt {
+    width: 65px;
+}
+/* longer width */
+.app-type-icon-pack, .app-type-wallpaper {
+    width: 75px;
+}
+
+.app-type-txt {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* App Type Colors */
+
+.app-type-klwp {
+    background-color: #c43149;
+    margin-left: 10px;
+}
+
+.app-type-kwgt {
+    background-color: #4382c5;
+}
+
+.app-type-icon-pack {
+    background-color: #1d9ae2;
+}
+
+.app-type-wallpaper {
+    background-color: rgb(134 82 204);
+}
+
+/* --- Tablet respinsive --- */
+
+@media only screen and (max-width: 1080px) {
+    .app-item-container {
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .first-app {
+        padding-top: 0;
+    }
+    .app-thumbnail {
+        height: 300px;
+    }
+    .apps-container {
+        flex-wrap: wrap;
+    }
+    .section-title {
+        text-align: center;
+        white-space: nowrap;
+        padding-left: 20px;
+    }
+    .line-left {
+        display: inline;
+    }
+}
+
+/* --- Mobile respinsive --- */
+
+@media only screen and (max-width: 720px) {
+    /* Buttons */
+    .cta-button-container {
+        width: 100%;
+    }
+    .cta-button-1, .cta-button-2, .cta-button-3 {
+        font-size: 11px;
+        width: 100%;
+    }
+    #button-1 {
+        width: 100%;
+    }
+    #button-2 {
+        width: 100%;
+        padding-left: 8px;
+    }
+    .app-thumbnail {
+        height: 100%;
+        object-fit: contain;
+    }
+}
