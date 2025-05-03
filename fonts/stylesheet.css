@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Nohemi';
+    src: url('Nohemi-Regular.woff2') format('woff2'),
+        url('Nohemi-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

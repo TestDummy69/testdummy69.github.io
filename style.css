@@ -1,0 +1,225 @@
+/* General Styles (Existing) */
+@font-face {
+    font-family: 'Nohemi';
+    src: url('/fonts/Nohemi.woff2') format('woff2'),
+         url('/fonts/Nohemi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Overused Grotesk';
+    src: url('/fonts/OverusedGrotesk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  html {
+    font-family: "Overused Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  body {
+    overflow: hidden;
+    margin: 0;
+    background-color: #10001A;
+    color: #F8ECFF;
+  }
+  
+  h1 {
+    font-family: 'Nohemi';
+    font-size: 4.6rem;
+    font-weight: 800;
+    margin: 0;
+    color: #F8ECFF;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: 400;
+    color: #F1D9FF;
+  }
+  
+  a {
+    color: #EAC7FF;
+    font-weight: 300;
+    position: relative;
+    text-decoration: none;
+    outline: none; /* Removes default outline */
+  }
+  
+  /* Only apply glow to links inside #contact-links */
+  #contact-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #D48EFF;
+    opacity: 0.3;
+    transition: opacity 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  #contact-links a:hover::after {
+    opacity: 1;
+    box-shadow: 0 0 8px 2px #d48eff55;
+  }
+  
+  .divider {
+    color: #B287D4;
+  }
+  
+  .divider-line {
+    background-color: #D48EFF44;
+    width: 100%;
+    height: 1px;
+  }
+  
+  #bg-gradient-1 {
+    background-color: #42145F;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(200px);
+    position: absolute;
+    top: 60%;
+    left: 50vw;
+    bottom: 0;
+    border-radius: 100%;
+  }
+  
+  #bg-gradient-2 {
+    background-color: #7528A3;
+    width: 60vw;
+    height: 60vh;
+    filter: blur(110px);
+    position: absolute;
+    top: 90%;
+    left: 70vw;
+    border-radius: 100%;
+  }
+  
+  #info-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap; /* ⬅ Prevent line breaks */
+    padding: 1rem;
+    gap: 3rem;
+  }
+  
+  #links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  #links-container a {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 1em;
+    background: transparent;
+    border: 1px solid #D48EFF44;
+    color: #EBCBFF;
+    font-family: inherit;
+    text-decoration: none;
+    line-height: 3rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+  }
+  
+  #links-container a:hover {
+    background-color: #D48EFF22;
+    border-color: #D48EFF;
+  }
+  
+  #name div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #contact-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    /* Stack elements vertically */
+    #info-container {
+      gap: 2rem;
+      padding: 1rem;
+      text-align: center;
+    }
+  
+    h1 {
+      font-size: 3rem;
+    }
+  
+    p {
+      font-size: 1.2rem;
+    }
+  
+    #links-container a {
+      font-size: 0.9rem;
+      height: 2.5rem;
+    }
+  
+    .divider-line {
+        display: none;
+    }
+  
+    /* Make sure contact links stack too */
+    #contact-links {
+      align-items: center;
+    }
+  
+    #contact-links a {
+      font-size: 1rem;
+    }
+  
+    /* Reduce font size and increase the button padding on smaller screens */
+    #links-container a {
+      font-size: 0.9rem;
+      padding-left: 1em;
+      height: 2.8rem;
+    }
+  }
+  
+  /* Very small devices (up to 480px) */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    #links-container a {
+      font-size: 0.8rem;
+      height: 2.5rem;
+    }
+  }
+  
