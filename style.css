@@ -1,12 +1,12 @@
-/* General Styles (Existing) */
 @font-face {
-    font-family: 'Nohemi';
-    src: url('/fonts/Nohemi.woff2') format('woff2'),
-         url('/fonts/Nohemi.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: 'Nohemi';
+  src: url('/fonts/Nohemi-Regular.woff2') format('woff2'),
+       url('/fonts/Nohemi-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
   
   @font-face {
     font-family: 'Overused Grotesk';
@@ -164,6 +164,10 @@
     gap: 1em;
   }
   
+  #logo {
+    width: 40px;
+  }
+
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
     /* Stack elements vertically */
